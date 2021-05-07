@@ -1,24 +1,2 @@
-server:
-  port: 3344
-
-spring:
-  application:
-    name: cloud-config-center
-  cloud:
-    config:
-      server:
-        git:
-          uri: https://github.com/Vict-star/springcloud-config.git       #Github上仓库的链接地址
-          search-paths:
-            - springcloud-config     #仓库的名字
-      label: master    #仓库的分支名字
-
-eureka:
-  client:
-    fetch-registry: true  # 检索自己，表示自己不是注册中心，单节点无所谓，集群必须设置为true才能配合ribbon使用负载均衡
-    register-with-eureka: true #注册自己，表示自己不是注册中心
-    service-url:
-      #  defaultZone: http://eureka7001.com:7001/eureka/  #入驻哪个主机上的哪个端口，单个注册中心
-      defaultZone: http://eureka7001.com:7001/eureka/, http://eureka7002.com:7002/eureka/ #入驻哪个主机上的哪个端口，注册中心集群：中间用，隔开
-
-
+config:
+  info: "http://localhost:3344/master/config-dev.yml"
