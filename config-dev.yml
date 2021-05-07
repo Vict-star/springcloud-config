@@ -1,2 +1,2 @@
 config:
-  info: "http://localhost:3344/master/config-dev.yml"
+  info: "http://localhost:3344/master/config-dev.yml,version=1"
